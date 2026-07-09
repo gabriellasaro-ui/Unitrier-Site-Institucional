@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}Cases de Sucesso - Unitrier{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cases-sucesso.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="cases-hero">
+    <div class="container">
+        <h1>Cases de Sucesso</h1>
+        <p>São mais de 600 supermercados atendidos!</p>
+        <p>Otimização média de 30% na produtividade do time e redução média de 2% na despesa operacional geral.</p>
+    </div>
+</section>
+
+<section class="cases-list">
+    <div class="container">
+        <div class="case-card">
+            <div class="case-image">
+                <img src="{{ url_for('static', filename='images/cases-sucesso/v190_551.png') }}" alt="Rede Verde Mais">
+            </div>
+            <div class="case-content">
+                <span class="case-badge">Case de sucesso</span>
+                <span class="case-category">Pricing e Gestão de Categorias</span>
+                <h2>Rede Verde Mais Fresh Market</h2>
+                <p class="case-location">Curitiba - PR, 4 Lojas</p>
+                <p class="case-description">
+                    Rede Verde Mais e Unitrier implantam otimização de processos e conquistam
+                    quase 2% de crescimento no lucro líquido.
+                </p>
+                <div class="case-result">
+                    <span class="result-value">1,99%</span>
+                    <span class="result-label">Aumento no lucro líquido</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-image">
+                <img src="{{ url_for('static', filename='images/cases-sucesso/v190_573.png') }}" alt="Supermercado Aquino">
+            </div>
+            <div class="case-content">
+                <span class="case-badge">Case de sucesso</span>
+                <span class="case-category">Prevenção de Perdas</span>
+                <h2>Supermercado Aquino</h2>
+                <p class="case-location">Bodoquena - MS</p>
+                <p class="case-description">
+                    Loja reduz em 47% a perda geral com a assessoria da Unitrier. Indicadores
+                    de perdas apresentou uma queda positiva de 3,13% para 1,66% sobre a receita bruta.
+                </p>
+                <div class="case-result">
+                    <span class="result-value">47%</span>
+                    <span class="result-label">Redução na Perda Geral</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-image">
+                <img src="{{ url_for('static', filename='images/cases-sucesso/v190_584.png') }}" alt="Supermercados Iapó">
+            </div>
+            <div class="case-content">
+                <span class="case-badge">Case de sucesso</span>
+                <span class="case-category">Pricing e Gestão de Categorias</span>
+                <h2>Supermercados Iapó</h2>
+                <p class="case-location">Castro - PR</p>
+                <p class="case-description">
+                    Alcançamos um aumento de 2,66% no lucro líquido e um impressionante
+                    crescimento de 71,5% no resultado final.
+                </p>
+                <div class="case-results">
+                    <div class="case-result">
+                        <span class="result-value">2,66%</span>
+                        <span class="result-label">Aumento no lucro líquido</span>
+                    </div>
+                    <div class="case-result">
+                        <span class="result-value">71,5%</span>
+                        <span class="result-label">Crescimento no resultado final</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-image">
+                <img src="{{ url_for('static', filename='images/cases-sucesso/v190_605.png') }}" alt="Rede Barracão">
+            </div>
+            <div class="case-content">
+                <span class="case-badge">Case de sucesso</span>
+                <span class="case-category">Prevenção de Perdas</span>
+                <h2>Rede Barracão</h2>
+                <p class="case-location">Bauru - SP, 7 lojas</p>
+                <p class="case-description">
+                    Índice de perdas no açougue despencou de 5,14% para 1,90% em rede de supermercados.
+                </p>
+                <div class="case-result">
+                    <span class="result-value">63%</span>
+                    <span class="result-label">Redução na perca do açougue</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-image">
+                <img src="{{ url_for('static', filename='images/cases-sucesso/supermercados royal.png') }}" alt="Supermercados Royal">
+            </div>
+            <div class="case-content">
+                <span class="case-badge">Case de sucesso</span>
+                <span class="case-category">Prevenção de Perdas</span>
+                <h2>Supermercados Royal</h2>
+                <p class="case-location">Chapecó - SC, 2 Lojas</p>
+                <p class="case-description">
+                    Índice de percas do açougue despenca 72%. Processos implantados pela Unitrier
+                    geram queda significativa de 5,43% para 1,53%.
+                </p>
+                <div class="case-result">
+                    <span class="result-value">72%</span>
+                    <span class="result-label">Redução na perca do açougue</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-image">
+                <img src="{{ url_for('static', filename='images/cases-sucesso/jumbo atacadista.png') }}" alt="Jumbo Atacadista">
+            </div>
+            <div class="case-content">
+                <span class="case-badge">Case de sucesso</span>
+                <span class="case-category">Plano de Negócios</span>
+                <h2>Jumbo Atacadista</h2>
+                <p class="case-location">Curitiba - PR</p>
+                <p class="case-description">
+                    Desenvolvimento completo de um planejamento estratégico global, incluindo
+                    estudo de viabilidade financeira, plano comercial, operacional e suporte
+                    pós-implantação para a viabilização de novos negócios.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Quer fazer parte dos nossos cases de sucesso?</h2>
+        <p>Fale com um especialista e descubra como podemos ajudar seu negócio.</p>
+        <a href="/contato" class="btn btn-primary">Fale com um especialista</a>
+    </div>
+</section>
+{% endblock %}

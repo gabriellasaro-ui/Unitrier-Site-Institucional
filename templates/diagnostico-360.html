@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Diagnóstico 360º - Unitrier{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/diagnostico-360.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="diagnostico-hero">
+    <div class="container">
+        <h1>Diagnóstico 360º Unitrier</h1>
+        <p>
+            Descubra como impulsionar seu negócio com o Diagnóstico 360º, uma abordagem
+            completa e estratégica para o varejo que identifica desafios, revela oportunidades
+            e entrega soluções personalizadas para maximizar seus resultados.
+        </p>
+    </div>
+</section>
+
+<section class="diagnostico-steps">
+    <div class="container">
+        <h2>Como funciona o Diagnóstico 360º</h2>
+
+        <div class="roadmap">
+            <div class="roadmap-item">
+                <div class="roadmap-marker">
+                    <span class="roadmap-number">1</span>
+                </div>
+                <div class="roadmap-content">
+                    <div class="roadmap-image">
+                        <img src="{{ url_for('static', filename='images/diagnostico-360/RAIO X.png') }}" alt="Raio X">
+                    </div>
+                    <div class="roadmap-text">
+                        <h3>Raio X</h3>
+                        <p>
+                            Realizamos uma análise completa e detalhada do seu negócio, avaliando
+                            mais de 200 critérios mensuráveis em três verticais: pessoas, processos e resultados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roadmap-item">
+                <div class="roadmap-marker">
+                    <span class="roadmap-number">2</span>
+                </div>
+                <div class="roadmap-content">
+                    <div class="roadmap-image">
+                        <img src="{{ url_for('static', filename='images/diagnostico-360/PROJEÇÃO DE OPORTUNIDADE.png') }}" alt="Projeção de Oportunidades">
+                    </div>
+                    <div class="roadmap-text">
+                        <h3>Projeção de Oportunidades</h3>
+                        <p>
+                            Com base nos dados coletados, identificamos as principais oportunidades
+                            de melhoria e crescimento para o seu negócio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roadmap-item">
+                <div class="roadmap-marker">
+                    <span class="roadmap-number">3</span>
+                </div>
+                <div class="roadmap-content">
+                    <div class="roadmap-image">
+                        <img src="{{ url_for('static', filename='images/diagnostico-360/PLANO DE AÇÃO.png') }}" alt="Plano de Ação">
+                    </div>
+                    <div class="roadmap-text">
+                        <h3>Plano de Ação</h3>
+                        <p>
+                            Desenvolvemos um plano de ação detalhado com diretrizes claras e
+                            objetivas para implementação das melhorias identificadas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="diagnostico-benefits">
+    <div class="container">
+        <h2>Benefícios do Diagnóstico 360º</h2>
+
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Visão completa do negócio</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Identificação de gargalos</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Oportunidades de crescimento</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Redução de perdas</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Otimização de processos</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Aumento da lucratividade</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Pronto para descobrir o potencial do seu negócio?</h2>
+        <p>Fale com um especialista e agende seu Diagnóstico 360º.</p>
+        <a href="/contato" class="btn btn-primary">Fale com um especialista</a>
+    </div>
+</section>
+{% endblock %}

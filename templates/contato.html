@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Contato - Unitrier{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contato.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="contact-hero">
+    <div class="container">
+        <h1>Conte com a Unitrier para desenvolver ao máximo o potencial de seu varejo!</h1>
+        <p>Preencha o formulário ao lado e nós entraremos em contato em breve</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-form-wrapper">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu_email@mail.com.br" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Celular</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(DDD) 00000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Cidade</label>
+                        <input type="text" id="city" name="city" placeholder="Sua cidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area">Área de interesse</label>
+                        <select id="area" name="area">
+                            <option value="">Selecione aqui</option>
+                            <option value="comercial">Comercial, Pricing e Gestão de Categorias</option>
+                            <option value="estoque">Estoques e Prevenção de Perdas</option>
+                            <option value="financeiro">Financeiro e Controladoria</option>
+                            <option value="pessoal">Pessoas e Operação</option>
+                            <option value="estrategico">Gestão Estratégica e Governança Corporativa</option>
+                            <option value="diagnostico">Diagnóstico 360º</option>
+                            <option value="shelf">Software Shelf</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Escreva uma mensagem..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <h3>Endereço</h3>
+                    <p>Avenida Cândido de Abreu, 660 Sala 2201<br>Curitiba – Paraná</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Faça uma chamada:</h3>
+                    <p>(41) 3149-4002 | (41) 9990-8400</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Mande-nos um e-mail</h3>
+                    <p>unitrier@unitrier.com.br</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

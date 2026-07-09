@@ -1,0 +1,144 @@
+/* ============================================
+   Estratégico Page Styles
+   ============================================ */
+
+.service-hero {
+    padding: 80px 0;
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+}
+
+.service-badge {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 16px;
+}
+
+.service-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    max-width: 800px;
+}
+
+.service-hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-bottom: 16px;
+}
+
+.services-detail {
+    padding: var(--section-padding);
+    background-color: var(--bg-light);
+}
+
+.service-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--text-white);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.service-block--reversed {
+    flex-direction: row-reverse;
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-image {
+    flex: 1;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.service-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.service-tags span {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--bg-light);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.service-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.cta-section {
+    padding: var(--section-padding);
+    background-color: var(--primary-dark);
+    text-align: center;
+    color: var(--text-white);
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .service-hero h1 {
+        font-size: 36px;
+    }
+
+    .service-block,
+    .service-block--reversed {
+        flex-direction: column;
+    }
+
+    .service-block {
+        padding: 24px;
+    }
+}

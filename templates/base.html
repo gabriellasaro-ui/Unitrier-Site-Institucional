@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Unitrier - Assessoria e Consultoria para Varejo{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Unitrier">
+            </a>
+
+            <nav class="main-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/quem-somos" class="nav-link">Quem Somos</a>
+                <a href="/cases" class="nav-link">Cases</a>
+                <a href="/contato" class="nav-link">Contato</a>
+            </nav>
+
+            <div class="header-actions">
+                <nav class="secondary-nav">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Serviços</a>
+                        <div class="dropdown-menu">
+                            <a href="/servicos/comercial">Comercial, Pricing e Gestão de Categorias</a>
+                            <a href="/servicos/estoque">Estoques e Prevenção de Perdas</a>
+                            <a href="/servicos/financeiro">Financeiro e Controladoria</a>
+                            <a href="/servicos/pessoal-operacao">Pessoas e Operação</a>
+                            <a href="/servicos/estrategico">Gestão Estratégica e Governança Corporativa</a>
+                            <a href="/diagnostico-360">Diagnóstico 360º</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Produtos</a>
+                        <div class="dropdown-menu">
+                            <a href="/produtos/shelf">Software Shelf</a>
+                        </div>
+                    </div>
+                    <a href="#blog" class="nav-link">Blog</a>
+                </nav>
+                <a href="/contato" class="btn btn-primary">Fale com um especialista</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/quem-somos" class="nav-link">Quem Somos</a>
+        <a href="/cases" class="nav-link">Cases</a>
+        <a href="/contato" class="nav-link">Contato</a>
+        <details class="mobile-dropdown">
+            <summary class="nav-link">Serviços</summary>
+            <div class="mobile-dropdown-menu">
+                <a href="/servicos/comercial">Comercial, Pricing e Gestão de Categorias</a>
+                <a href="/servicos/estoque">Estoques e Prevenção de Perdas</a>
+                <a href="/servicos/financeiro">Financeiro e Controladoria</a>
+                <a href="/servicos/pessoal-operacao">Pessoas e Operação</a>
+                <a href="/servicos/estrategico">Gestão Estratégica e Governança Corporativa</a>
+                <a href="/diagnostico-360">Diagnóstico 360º</a>
+            </div>
+        </details>
+        <details class="mobile-dropdown">
+            <summary class="nav-link">Produtos</summary>
+            <div class="mobile-dropdown-menu">
+                <a href="/produtos/shelf">Software Shelf</a>
+            </div>
+        </details>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="/contato" class="btn btn-primary">Fale com um especialista</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Unitrier" class="footer-logo">
+                    <p class="footer-description">
+                        Diagnosticamos falhas, identificamos oportunidades, traçamos planos de ação,
+                        executamos e acompanhamos resultados para elevar o sucesso de seu supermercado à máxima potência.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Conheça a Unitrier</h4>
+                    <ul>
+                        <li><a href="/quem-somos">Quem Somos</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="/cases">Cases de Sucesso</a></li>
+                        <li><a href="/contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p>Av. Cândido de Abreu, 660 Sl. 2201<br>Curitiba, PR</p>
+                    <p>(41) 3149-4002 | (41) 9990-8400</p>
+                    <p>unitrier@unitrier.com.br</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Unitrier. All Rights Reserved.</p>
+                <a href="#">Políticas de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        if (mobileMenuBtn && mobileNav) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+            });
+        }
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

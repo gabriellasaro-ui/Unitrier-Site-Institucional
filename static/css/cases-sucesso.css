@@ -1,0 +1,159 @@
+/* ============================================
+   Cases de Sucesso Page Styles
+   ============================================ */
+
+.cases-hero {
+    padding: 80px 0;
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    text-align: center;
+}
+
+.cases-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.cases-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.cases-list {
+    padding: var(--section-padding);
+    background-color: var(--bg-light);
+}
+
+.case-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background-color: var(--text-white);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.case-card:nth-child(even) {
+    direction: rtl;
+}
+
+.case-card:nth-child(even) > * {
+    direction: ltr;
+}
+
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.case-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.case-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+.case-category {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-gray);
+    margin-bottom: 16px;
+}
+
+.case-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.case-location {
+    font-size: 14px;
+    color: var(--text-gray);
+    margin-bottom: 16px;
+}
+
+.case-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-gray);
+    margin-bottom: 24px;
+}
+
+.case-results {
+    display: flex;
+    gap: 40px;
+}
+
+.case-result {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-value {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 4px;
+}
+
+.result-label {
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+.cta-section {
+    padding: var(--section-padding);
+    background-color: var(--primary-dark);
+    text-align: center;
+    color: var(--text-white);
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .cases-hero h1 {
+        font-size: 36px;
+    }
+
+    .case-card {
+        grid-template-columns: 1fr;
+    }
+
+    .case-card:nth-child(even) {
+        direction: ltr;
+    }
+
+    .case-content {
+        padding: 24px;
+    }
+
+    .case-results {
+        flex-direction: column;
+        gap: 24px;
+    }
+}

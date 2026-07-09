@@ -1,0 +1,373 @@
+{% extends "base.html" %}
+
+{% block title %}Unitrier - Assessoria e Consultoria para Varejo{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-badge">Assessoria e consultoria para varejos</span>
+        <h1 class="hero-title">Eleve os resultados e acelere o crescimento de seu varejo</h1>
+        <p class="hero-description">
+            Diagnosticamos falhas, identificamos oportunidades, traçamos planos de ação,
+            executamos e acompanhamos resultados para elevar o sucesso de seu negócio à máxima potência.
+        </p>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-value">1,50%</span>
+                <span class="stat-label">Aumento médio de lucro líquido</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">+15</span>
+                <span class="stat-label">Anos de atuação</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">+600</span>
+                <span class="stat-label">Supermercados atendidos</span>
+            </div>
+        </div>
+        <a href="/contato" class="btn btn-primary">Descubra todo potencial de lucro de seu negócio</a>
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/home/IMAGEM HERO.png') }}" alt="Unitrier - Assessoria para Varejo">
+    </div>
+</section>
+
+<!-- Partners Section -->
+<section class="partners">
+    <div class="container">
+        <p class="partners-text">Centenas de empresas contam com a Unitrier em suas estratégias</p>
+        <div class="partners-logos">
+            <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="Parceiro">
+            <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="Parceiro">
+            <img src="{{ url_for('static', filename='images/home/v94_5.png') }}" alt="Parceiro">
+            <img src="{{ url_for('static', filename='images/home/v94_6.png') }}" alt="Parceiro">
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+    <div class="container">
+        <div class="services-header">
+            <h2>Varejista, nós otimizamos todos os setores de seu negócio</h2>
+            <p>Para que a última linha da sua DRE mostre o resultado que você busca!</p>
+            <p>Seu supermercado, atacarejo, loja especializada ou loja premium terá um crescimento muito mais acelerado com um parceiro especializado em:</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="">
+                </div>
+                <h3>Otimização da produtividade</h3>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="">
+                </div>
+                <h3>Investimento em processos com foco em resultado</h3>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{{ url_for('static', filename='images/home/v94_5.png') }}" alt="">
+                </div>
+                <h3>Implantação e ajuste do orçamento para redução de custos</h3>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{{ url_for('static', filename='images/home/v94_6.png') }}" alt="">
+                </div>
+                <h3>Expansão e abertura de novas lojas</h3>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{{ url_for('static', filename='images/home/carrossel.png') }}" alt="">
+                </div>
+                <h3>Desenvolvimento e capacitação de pessoas</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section class="results">
+    <div class="container">
+        <h2>A excelência de nosso trabalho é comprovada pelos resultados que geramos aos nossos clientes!</h2>
+        <p>Do diagnóstico inicial à geração e acompanhamento de resultados</p>
+        <p>Nosso fluxo de geração de resultados é desenvolvido a partir de uma metodologia testada e de eficácia comprovada</p>
+
+        <div class="results-timeline">
+            <div class="timeline-step">
+                <div class="step-number">1</div>
+                <h3>Avaliação do cenário atual</h3>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">2</div>
+                <h3>Projeção de oportunidades</h3>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">3</div>
+                <h3>Elaboração do projeto</h3>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">4</div>
+                <h3>Implantação</h3>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">5</div>
+                <h3>Gestão de resultados</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio">
+    <div class="container">
+        <h2>Nossos serviços são divididos em 5 grandes áreas:</h2>
+        <p>De ponta a ponta, nós temos as soluções para as demandas de seu varejo!</p>
+
+        <div class="portfolio-grid">
+            <a href="/servicos/comercial" class="portfolio-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="">
+                </div>
+                <h3>Comercial, Pricing e Gestão de Categorias</h3>
+                <p>Gestão de Compras<br>Pricing<br>Gestão de Categorias</p>
+                <span class="card-link">Saiba mais →</span>
+            </a>
+
+            <a href="/servicos/estoque" class="portfolio-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="">
+                </div>
+                <h3>Estoques e Prevenção de Perdas</h3>
+                <p>Gestão de Estoques<br>Prevenção de perdas</p>
+                <span class="card-link">Saiba mais →</span>
+            </a>
+
+            <a href="/servicos/financeiro" class="portfolio-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/home/v94_5.png') }}" alt="">
+                </div>
+                <h3>Financeiro e Controladoria</h3>
+                <p>Gestão Financeira<br>Controladoria</p>
+                <span class="card-link">Saiba mais →</span>
+            </a>
+
+            <a href="/servicos/pessoal-operacao" class="portfolio-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/home/v94_6.png') }}" alt="">
+                </div>
+                <h3>Pessoas e Operação</h3>
+                <p>Gestão operacional<br>Gestão da produtividade</p>
+                <span class="card-link">Saiba mais →</span>
+            </a>
+
+            <a href="/servicos/estrategico" class="portfolio-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/home/carrossel.png') }}" alt="">
+                </div>
+                <h3>Gestão Estratégica e Governança Corporativa</h3>
+                <p>Planejamento estratégico<br>Plano de negócios<br>Governança corporativa</p>
+                <span class="card-link">Saiba mais →</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Diagnostics Section -->
+<section class="diagnostics">
+    <div class="container">
+        <h2>Abordagem completa que oferece soluções em todas as áreas de seu negócio</h2>
+        <p>Veja os serviços de nosso portfólio:</p>
+
+        <div class="diagnostics-grid">
+            <div class="diagnostic-card">
+                <span class="card-label">Fase 1</span>
+                <h3>Diagnóstico 360º</h3>
+                <p>Na 1ª fase, é feito um diagnóstico 360º, onde avaliamos o cenário atual a partir de mais de 200 critérios mensuráveis, voltado a três verticais: pessoas, processos e resultados.</p>
+            </div>
+            <div class="diagnostic-card">
+                <span class="card-label">Fase 2</span>
+                <h3>Assessoria e Consultoria</h3>
+                <p>Na fase 2, de assessoria ou consultoria, colocamos a mão na massa e executamos as diretrizes traçadas no diagnóstico.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cases Section -->
+<section class="cases">
+    <div class="container">
+        <h2>Conheça alguns cases de sucesso</h2>
+
+        <div class="cases-grid">
+            <div class="case-card">
+                <img src="{{ url_for('static', filename='images/home/rede_verde_mais.png') }}" alt="Rede Verde Mais">
+                <div class="case-content">
+                    <span class="case-label">Case de sucesso</span>
+                    <h3>Rede Verde Mais</h3>
+                    <p>Rede Verde Mais e Unitrier implantam otimização de processos e conquistam quase 2% de crescimento no lucro líquido.</p>
+                    <a href="/cases" class="btn btn-secondary">Saiba mais</a>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <img src="{{ url_for('static', filename='images/home/rede_emporium.png') }}" alt="Rede Emporium">
+                <div class="case-content">
+                    <span class="case-label">Case de sucesso</span>
+                    <h3>Rede Emporium</h3>
+                    <p>Rede paulista Emporium São Paulo, 5 lojas com a assessoria da Unitrier, teve um importante aumento de 1,62% no lucro líquido!</p>
+                    <a href="/cases" class="btn btn-secondary">Saiba mais</a>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <img src="{{ url_for('static', filename='images/home/rede_barracao.svg') }}" alt="Rede Barracão">
+                <div class="case-content">
+                    <span class="case-label">Case de sucesso</span>
+                    <h3>Rede Barracão</h3>
+                    <p>Índice de perdas no açougue despencou de 5,14% para 1,90% em rede de supermercados com a assessoria da Unitrier.</p>
+                    <a href="/cases" class="btn btn-secondary">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Methodology Section -->
+<section class="methodology">
+    <div class="container">
+        <h2>Conceito Internacional de Gerenciamento de Projetos PMBOK/PMI</h2>
+        <p>Especialidade no varejo</p>
+
+        <div class="methodology-grid">
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="">
+                <span>Planejamento estratégico</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="">
+                <span>Gestão Financeira</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/v94_5.png') }}" alt="">
+                <span>Gestão da Controladoria</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/v94_6.png') }}" alt="">
+                <span>Gestão Comercial</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/carrossel.png') }}" alt="">
+                <span>Gestão de Categorias</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="">
+                <span>Pricing</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="">
+                <span>Gestão de Estoques</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/v94_5.png') }}" alt="">
+                <span>Prevenção de Perdas</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/v94_6.png') }}" alt="">
+                <span>Gestão Operacional</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/carrossel.png') }}" alt="">
+                <span>Gestão da Produtividade</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="">
+                <span>Governança Corporativa</span>
+            </div>
+            <div class="method-item">
+                <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="">
+                <span>Plano de negócios</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Numbers Section -->
+<section class="numbers">
+    <div class="container">
+        <h2>Faça o investimento certo que vai elevar o sucesso de seu negócio à máxima potência!</h2>
+        <p>Conheça alguns números que a Unitrier alcançou para empresas varejistas:</p>
+
+        <div class="numbers-grid">
+            <div class="number-card">
+                <span class="number-value">5 dias</span>
+                <span class="number-label">de otimização média no ciclo financeiro*</span>
+            </div>
+            <div class="number-card">
+                <span class="number-value">3,00%</span>
+                <span class="number-label">de aumento médio na margem das ações promocionais*</span>
+            </div>
+            <div class="number-card">
+                <span class="number-value">1,5%</span>
+                <span class="number-label">de aumento médio no lucro líquido**</span>
+            </div>
+            <div class="number-card">
+                <span class="number-value">1,00%</span>
+                <span class="number-label">de redução média na perda do FLV**</span>
+            </div>
+            <div class="number-card">
+                <span class="number-value">2,00%</span>
+                <span class="number-label">de redução média no CMV*</span>
+            </div>
+            <div class="number-card">
+                <span class="number-value">30%</span>
+                <span class="number-label">de otimização na produtividade do time*</span>
+            </div>
+            <div class="number-card">
+                <span class="number-value">1,2%</span>
+                <span class="number-label">de redução média na perda do açougue*</span>
+            </div>
+            <div class="number-card">
+                <span class="number-value">80%</span>
+                <span class="number-label">de aumento na produtividade da gestão de categorias e precificação**</span>
+            </div>
+            <div class="number-card">
+                <span class="number-value">2,00%</span>
+                <span class="number-label">de redução média na despesa operacional geral**</span>
+            </div>
+        </div>
+
+        <p class="numbers-disclaimer">*Resultados médios alcançados com base no histórico de projetos implantados. ** Case publicado em veículo de comunicação do setor varejista</p>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <div class="cta-content">
+            <span class="cta-badge">Centenas de empresas contam com a Unitrier em suas estratégias</span>
+            <h2>Eleve os resultados e acelere o crescimento de seu varejo</h2>
+            <p>Diagnosticamos falhas, identificamos oportunidades, traçamos planos de ação, executamos e acompanhamos resultados para elevar o sucesso de seu negócio à máxima potência</p>
+            <a href="/contato" class="btn btn-primary">Descubra todo potencial de lucro de seu negócio</a>
+        </div>
+        <div class="cta-image">
+            <img src="{{ url_for('static', filename='images/home/IMAGEM HERO.png') }}" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blog">
+    <div class="container">
+        <h2>Leia mais informações no nosso Blog</h2>
+    </div>
+</section>
+{% endblock %}

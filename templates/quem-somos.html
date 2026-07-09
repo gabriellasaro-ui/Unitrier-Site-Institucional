@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Quem Somos - Unitrier{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/quem-somos.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="quem-somos-hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-badge">Conheça a Unitrier</span>
+            <h1>Quem Somos</h1>
+            <p>
+                Referência no setor varejista com atuação em todo país, desde 2009 oferece soluções personalizadas
+                em gestão de processos, produtividade, lucratividade, tecnologia e inovação para supermercados,
+                atacarejos, lojas especializadas e lojas com conceito premium.
+            </p>
+            <p>
+                Nós dispomos de uma equipe dinâmica, especializada e experiente em sua área de atuação,
+                capaz de entender e suprir todas as necessidades do varejo, por meio de uma metodologia
+                de análise minuciosa de demandas e um planejamento especializado que irá assegurar a
+                otimização de resultados e o sucesso do negócio a curto e médio prazo.
+            </p>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/quem-somos/Imagem QUEM SOMOS.png') }}" alt="Unitrier - Quem Somos">
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-value">1,50%</span>
+                <span class="stat-label">Aumento médio de lucro líquido</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">+15</span>
+                <span class="stat-label">Anos de atuação</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">+600</span>
+                <span class="stat-label">Supermercados atendidos</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partners-section">
+    <div class="container">
+        <h2>Centenas de empresas contam com a Unitrier em suas estratégias</h2>
+        <div class="partners-logos">
+            <img src="{{ url_for('static', filename='images/quem-somos/v337_292.png') }}" alt="Parceiro">
+            <img src="{{ url_for('static', filename='images/quem-somos/v337_293.png') }}" alt="Parceiro">
+            <img src="{{ url_for('static', filename='images/quem-somos/v337_294.png') }}" alt="Parceiro">
+            <img src="{{ url_for('static', filename='images/quem-somos/v337_295.png') }}" alt="Parceiro">
+            <img src="{{ url_for('static', filename='images/quem-somos/v337_296.png') }}" alt="Parceiro">
+            <img src="{{ url_for('static', filename='images/quem-somos/v337_297.png') }}" alt="Parceiro">
+            <img src="{{ url_for('static', filename='images/quem-somos/v337_298.png') }}" alt="Parceiro">
+        </div>
+    </div>
+</section>
+{% endblock %}

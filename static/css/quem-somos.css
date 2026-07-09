@@ -1,0 +1,117 @@
+/* ============================================
+   Quem Somos Page Styles
+   ============================================ */
+
+.quem-somos-hero {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.quem-somos-hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 16px;
+}
+
+.quem-somos-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+}
+
+.quem-somos-hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.stats-section {
+    padding: 60px 0;
+    background-color: var(--primary-dark);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.stat-card {
+    color: var(--text-white);
+}
+
+.stat-value {
+    display: block;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.partners-section {
+    padding: var(--section-padding);
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.partners-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.partners-logos img {
+    height: 60px;
+    opacity: 0.7;
+    transition: var(--transition-fast);
+}
+
+.partners-logos img:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .quem-somos-hero .container {
+        grid-template-columns: 1fr;
+    }
+
+    .quem-somos-hero h1 {
+        font-size: 36px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

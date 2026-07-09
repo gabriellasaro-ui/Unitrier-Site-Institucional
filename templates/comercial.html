@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Comercial, Pricing e Gestão de Categorias - Unitrier{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/comercial.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="service-hero">
+    <div class="container">
+        <span class="service-badge">Setor de serviços</span>
+        <h1>Comercial, Pricing e Gestão de Categorias</h1>
+        <p>
+            Em média 70 a 80% do total das vendas no varejo, são direcionadas para o CMV e compras de novos produtos.
+            Por isso, é primordial realizar uma gestão comercial eficiente, ser assertivo na escolha e gestão do mix
+            de produtos, definir como ele será exposto e estabelecer uma precificação inteligente é fundamental
+            para um resultado de excelência.
+        </p>
+    </div>
+</section>
+
+<section class="services-detail">
+    <div class="container">
+        <div class="service-block">
+            <div class="service-content">
+                <h2>Gestão de Compras</h2>
+                <ul class="service-list">
+                    <li>Implantação dos processos e operações comerciais</li>
+                    <li>Políticas comerciais</li>
+                    <li>Implantação do JBP</li>
+                    <li>Negociação</li>
+                    <li>Gestão de Contratos</li>
+                    <li>Gestão de indicadores</li>
+                    <li>Resultados comerciais</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/comercial/Gestão de compras.png') }}" alt="Gestão de Compras">
+            </div>
+        </div>
+
+        <div class="service-block service-block--reversed">
+            <div class="service-content">
+                <h2>Gestão de Categorias</h2>
+                <div class="service-tags">
+                    <span>Classificação Mercadológica</span>
+                    <span>Gestão de Mix</span>
+                    <span>Gestão de Oportunidades com Foco em Rentabilidade</span>
+                    <span>Layout do PDV</span>
+                </div>
+                <ul class="service-list">
+                    <li>Mapa de categorias e departamentos</li>
+                    <li>Escalonamento de produtos</li>
+                    <li>Gestão das curvas ABCDE</li>
+                    <li>Gestão por tipo (destino, rotina, ocasional e conveniência)</li>
+                    <li>Planograma</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/comercial/gestão de categorias.png') }}" alt="Gestão de Categorias">
+            </div>
+        </div>
+
+        <div class="service-block">
+            <div class="service-content">
+                <h2>Pricing</h2>
+                <div class="service-tags">
+                    <span>Gestão de Margens</span>
+                    <span>Gestão da Competitividade</span>
+                    <span>Gestão de Oportunidades com Foco em Rentabilidade</span>
+                    <span>Gestão de Ações Comerciais</span>
+                    <span>Precificação Inteligente</span>
+                </div>
+                <ul class="service-list">
+                    <li>Conectividade Pricing + GC</li>
+                    <li>Métricas de precificação</li>
+                    <li>Margem mínima e ideal por produto</li>
+                    <li>Oportunidade de lucro</li>
+                    <li>Gestão de performance de lucratividade</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/comercial/pricing.png') }}" alt="Pricing">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Quer otimizar sua gestão comercial?</h2>
+        <p>Fale com um especialista e descubra como podemos ajudar seu negócio.</p>
+        <a href="/contato" class="btn btn-primary">Fale com um especialista</a>
+    </div>
+</section>
+{% endblock %}

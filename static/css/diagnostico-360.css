@@ -1,0 +1,226 @@
+/* ============================================
+   Diagnóstico 360 Page Styles
+   ============================================ */
+
+.diagnostico-hero {
+    padding: 80px 0;
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    text-align: center;
+}
+
+.diagnostico-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.diagnostico-hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.diagnostico-steps {
+    padding: var(--section-padding);
+    background-color: #090C17;
+}
+
+.diagnostico-steps h2 {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--text-white);
+}
+
+.roadmap {
+    position: relative;
+    padding-left: 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.roadmap::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.roadmap-item {
+    position: relative;
+    padding-bottom: 48px;
+}
+
+.roadmap-item:last-child {
+    padding-bottom: 0;
+}
+
+.roadmap-marker {
+    position: absolute;
+    left: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 4px rgba(1, 161, 255, 0.3);
+}
+
+.roadmap-number {
+    color: var(--text-white);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.roadmap-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.roadmap-image {
+    flex-shrink: 0;
+    width: 140px;
+}
+
+.roadmap-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.roadmap-text {
+    flex: 1;
+}
+
+.roadmap-text h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 12px;
+}
+
+.roadmap-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.diagnostico-benefits {
+    padding: var(--section-padding);
+    background-color: var(--text-white);
+}
+
+.diagnostico-benefits h2 {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--text-dark);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background-color: var(--bg-light);
+    border-radius: 12px;
+}
+
+.benefit-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-green);
+    color: var(--text-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.benefit-item span:last-child {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.cta-section {
+    padding: var(--section-padding);
+    background-color: var(--primary-dark);
+    text-align: center;
+    color: var(--text-white);
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .diagnostico-hero h1 {
+        font-size: 36px;
+    }
+
+    .roadmap {
+        padding-left: 60px;
+    }
+
+    .roadmap::before {
+        left: 19px;
+        top: 0;
+        bottom: 0;
+    }
+
+    .roadmap-marker {
+        left: -60px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .roadmap-number {
+        font-size: 14px;
+    }
+
+    .roadmap-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .roadmap-image {
+        width: 100px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}

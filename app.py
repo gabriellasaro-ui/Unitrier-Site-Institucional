@@ -48,4 +48,4 @@ def shelf():
     return render_template('software-shelf.html')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5008, portdebug=True)
+    app.run(host="0.0.0.0", port=5008, debug=True)

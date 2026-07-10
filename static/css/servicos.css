@@ -1,5 +1,6 @@
 /* ============================================
-   Comercial Page — faithful to Figma
+   Shared Service Pages (Comercial, Estoque, Financeiro,
+   Pessoas e Operação, Estratégico) — faithful to Figma
    ============================================ */
 
 /* ---- Dark hero (centered) ---- */
@@ -8,8 +9,7 @@
     background-color: var(--bg-dark);
     color: var(--text-white);
     text-align: center;
-    background-image:
-        radial-gradient(rgba(1, 161, 255, 0.10) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(1, 161, 255, 0.10) 1px, transparent 1px);
     background-size: 22px 22px;
     background-position: center top;
 }
@@ -26,7 +26,7 @@
     font-size: 48px;
     font-weight: 800;
     line-height: 1.15;
-    max-width: 640px;
+    max-width: 680px;
     margin: 0 auto 24px;
 }
 
@@ -35,8 +35,11 @@
     line-height: 1.7;
     opacity: 0.9;
     max-width: 850px;
-    margin: 0 auto;
+    margin: 0 auto 14px;
 }
+
+.service-hero-desc:last-child { margin-bottom: 0; }
+.service-hero-desc strong { font-weight: 700; opacity: 1; }
 
 /* ---- Solutions ---- */
 .service-solutions {
@@ -50,7 +53,7 @@
     text-align: center;
     color: var(--primary-dark);
     line-height: 1.3;
-    max-width: 740px;
+    max-width: 760px;
     margin: 0 auto 56px;
 }
 
@@ -60,7 +63,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 0;
     margin-bottom: 48px;
 }
 
@@ -70,7 +72,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    max-height: 340px;
+    max-height: 320px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -79,61 +81,64 @@
 .solution-card {
     background-color: var(--text-white);
     border-radius: 8px;
-    padding: 32px 36px;
+    padding: 28px 32px;
     box-shadow: 0 14px 40px rgba(3, 38, 69, 0.10);
     z-index: 2;
 }
 
-/* Card overlaps the image toward the center */
-.solution-block .solution-card {
-    margin-left: -60px;
-}
+.solution-block .solution-card { margin-left: -70px; }
 
-.solution-block--reversed {
-    direction: rtl;
-}
-
-.solution-block--reversed > * {
-    direction: ltr;
-}
-
+.solution-block--reversed { direction: rtl; }
+.solution-block--reversed > * { direction: ltr; }
 .solution-block--reversed .solution-card {
     margin-left: 0;
-    margin-right: -60px;
+    margin-right: -70px;
 }
 
 .solution-card h3 {
     font-size: 24px;
     font-weight: 800;
     color: var(--primary-dark);
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
-.solution-card p {
-    font-size: 15px;
+/* Two columns inside the card: description | bullets */
+.solution-cols {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 28px;
+    align-items: start;
+}
+
+.solution-cols.no-bullets { grid-template-columns: 1fr; }
+
+.solution-desc {
+    font-size: 14px;
     color: var(--text-dark);
     line-height: 1.7;
 }
 
 .solution-list {
     list-style: none;
-    margin-top: 18px;
+    min-width: 180px;
 }
 
 .solution-list li {
     position: relative;
-    padding-left: 20px;
-    margin-bottom: 8px;
-    font-size: 15px;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    font-size: 14px;
     color: var(--text-dark);
-    line-height: 1.5;
+    line-height: 1.4;
 }
+
+.solution-list li:last-child { margin-bottom: 0; }
 
 .solution-list li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 8px;
+    top: 7px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -158,4 +163,5 @@
     .service-hero-title { font-size: 32px; }
     .solutions-title { font-size: 26px; }
     .solution-card { padding: 24px; }
+    .solution-cols { grid-template-columns: 1fr; gap: 16px; }
 }

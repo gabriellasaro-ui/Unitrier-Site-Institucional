@@ -3,68 +3,70 @@
 {% block title %}Gestão Estratégica e Governança Corporativa - Unitrier{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/estrategico.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/servicos.css') }}">
 {% endblock %}
 
 {% block content %}
 <section class="service-hero">
     <div class="container">
         <span class="service-badge">Setor de serviços</span>
-        <h1>Gestão Estratégica e Governança Corporativa</h1>
-        <p>
-            Seja para um negócio em funcionamento ou em processo de abertura, a Unitrier,
-            através do serviço de assessoria e consultoria, atua em todos os âmbitos de sua
-            empresa para minimizar as suas perdas e potencializar seus lucros!
+        <h1 class="service-hero-title">Gestão Estratégica e Governança Corporativa</h1>
+        <p class="service-hero-desc">
+            Seja para um negócio em funcionamento ou em processo de abertura, a Unitrier, através do serviço de
+            assessoria e consultoria, atua em todos os âmbitos de sua empresa para <strong>minimizar as suas
+            perdas e potencializar seus lucros!</strong>
         </p>
     </div>
 </section>
 
-<section class="services-detail">
+<section class="service-solutions">
     <div class="container">
-        <div class="service-block">
-            <div class="service-content">
-                <h2>Plano de Negócios</h2>
-                <ul class="service-list">
-                    <li>Planejamento Global e Estratégico de Negócio</li>
-                    <li>Estudo de Viabilidade Econômica e Financeira</li>
-                    <li>Estudo e Plano Comercial</li>
-                    <li>Plano Operacional e de Produtividade</li>
-                    <li>Viabilização e Implantação do Novo Negócio</li>
-                    <li>Assessoria Pós Implantação</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="{{ url_for('static', filename='images/estrategico/plano de negócios.png') }}" alt="Plano de Negócios">
-            </div>
-        </div>
+        <h2 class="solutions-title">Confira os serviços que a Unitrier oferece no setor <span class="hl">Estratégico:</span></h2>
 
-        <div class="service-block service-block--reversed">
-            <div class="service-content">
-                <h2>Planejamento Estratégico</h2>
-                <div class="service-tags">
-                    <span>Planejamento Financeiro</span>
-                    <span>Planejamento Comercial</span>
-                </div>
-                <ul class="service-list">
-                    <li>Análise SWOT</li>
-                    <li>Plano estratégico do negócio</li>
-                    <li>Plano financeiro de médio e longo prazo</li>
-                    <li>Plano comercial orientado por dados</li>
-                    <li>Estudo da capacidade de endividamento e novos investimentos</li>
-                </ul>
-            </div>
-            <div class="service-image">
+        <div class="solution-block">
+            <div class="solution-image">
                 <img src="{{ url_for('static', filename='images/estrategico/planejamento estratégico.png') }}" alt="Planejamento Estratégico">
             </div>
+            <div class="solution-card">
+                <h3>Planejamento Estratégico</h3>
+                <div class="solution-cols">
+                    <p class="solution-desc">Análise SWOT | Plano estratégico do negócio | Plano financeiro de médio
+                        e longo prazo | Plano comercial orientado por dados | Estudo da capacidade de endividamento
+                        e novos investimentos</p>
+                    <ul class="solution-list">
+                        <li>Planejamento Financeiro</li>
+                        <li>Planejamento Comercial</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
 
-<section class="cta-section">
-    <div class="container">
-        <h2>Quer planejar o futuro do seu negócio?</h2>
-        <p>Fale com um especialista e descubra como podemos ajudar seu negócio.</p>
-        <a href="/contato" class="btn btn-primary">Fale com um especialista</a>
+        <div class="solution-block solution-block--reversed">
+            <div class="solution-image">
+                <img src="{{ url_for('static', filename='images/estrategico/plano de negócios.png') }}" alt="Plano de Negócios">
+            </div>
+            <div class="solution-card">
+                <h3>Plano de negócios</h3>
+                <div class="solution-cols no-bullets">
+                    <p class="solution-desc">Planejamento Global e Estratégico de Negócio | Estudo de Viabilidade
+                        Econômica e Financeira | Estudo e Plano Comercial | Plano Operacional e de Produtividade |
+                        Viabilização e Implantação do Novo Negócio | Assessoria Pós Implantação</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="solution-block">
+            <div class="solution-image">
+                <img src="{{ url_for('static', filename='images/estrategico/Governança Corporativa.png') }}" alt="Governança Corporativa">
+            </div>
+            <div class="solution-card">
+                <h3>Governança Corporativa</h3>
+                <div class="solution-cols no-bullets">
+                    <p class="solution-desc">Políticas Societárias e de Governança | Plano de Sucessão | Plano de
+                        Desenvolvimento Individual (Níveis Estratégico e Tático) | Mentoria Diretiva e Gerencial</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}

@@ -9,194 +9,81 @@
 {% block content %}
 <!-- Hero Section -->
 <section class="hero">
-    <div class="hero-content">
-        <span class="hero-badge">Assessoria e consultoria para varejos</span>
-        <h1 class="hero-title">Eleve os resultados e acelere o crescimento de seu varejo</h1>
-        <p class="hero-description">
-            Diagnosticamos falhas, identificamos oportunidades, traçamos planos de ação,
-            executamos e acompanhamos resultados para elevar o sucesso de seu negócio à máxima potência.
-        </p>
-        <div class="hero-stats">
-            <div class="stat-item">
-                <span class="stat-value">1,50%</span>
-                <span class="stat-label">Aumento médio de lucro líquido</span>
+    <div class="container hero-inner">
+        <div class="hero-content">
+            <span class="hero-badge">Assessoria e consultoria para varejos</span>
+            <h1 class="hero-title">Eleve os resultados e acelere o crescimento de seu varejo</h1>
+            <p class="hero-description">
+                Diagnosticamos falhas, identificamos oportunidades, traçamos planos de ação,
+                executamos e acompanhamos resultados para elevar o sucesso de seu negócio à máxima potência.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">1,50%</span>
+                    <span class="stat-label">Aumento médio de lucro líquido</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">+15</span>
+                    <span class="stat-label">Anos de atuação</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">+600</span>
+                    <span class="stat-label">Supermercados atendidos</span>
+                </div>
             </div>
-            <div class="stat-item">
-                <span class="stat-value">+15</span>
-                <span class="stat-label">Anos de atuação</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-value">+600</span>
-                <span class="stat-label">Supermercados atendidos</span>
-            </div>
+            <a href="/contato" class="btn btn-primary">Descubra todo potencial de lucro de seu negócio</a>
         </div>
-        <a href="/contato" class="btn btn-primary">Descubra todo potencial de lucro de seu negócio</a>
-    </div>
-    <div class="hero-image">
-        <img src="{{ url_for('static', filename='images/home/IMAGEM HERO.png') }}" alt="Unitrier - Assessoria para Varejo">
     </div>
 </section>
 
-<!-- Partners Section -->
+<!-- Partners Section (Carrossel) -->
 <section class="partners">
-    <div class="container">
-        <p class="partners-text">Centenas de empresas contam com a Unitrier em suas estratégias</p>
-        <div class="partners-logos">
-            <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="Parceiro">
-            <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="Parceiro">
-            <img src="{{ url_for('static', filename='images/home/v94_5.png') }}" alt="Parceiro">
-            <img src="{{ url_for('static', filename='images/home/v94_6.png') }}" alt="Parceiro">
-        </div>
-    </div>
+    <img class="partners-banner" src="{{ url_for('static', filename='images/home/carrossel.png') }}"
+         alt="Centenas de empresas contam com a Unitrier em suas estratégias">
 </section>
 
 <!-- Services Section -->
 <section class="services">
-    <div class="container">
-        <div class="services-header">
-            <h2>Varejista, nós otimizamos todos os setores de seu negócio</h2>
-            <p>Para que a última linha da sua DRE mostre o resultado que você busca!</p>
-            <p>Seu supermercado, atacarejo, loja especializada ou loja premium terá um crescimento muito mais acelerado com um parceiro especializado em:</p>
+    <div class="container services-inner">
+        <div class="services-intro">
+            <h2>Varejista, <span class="hl">nós otimizamos</span> todos os setores de seu negócio</h2>
+            <p class="services-lead">Para que a última linha da sua DRE mostre o resultado que você busca!</p>
+            <p class="services-desc">
+                Seu supermercado, atacarejo, loja especializada ou loja premium terá um crescimento muito mais
+                acelerado com <strong>um parceiro especializado em:</strong>
+            </p>
         </div>
 
-        <div class="services-grid">
+        <div class="services-cards">
             <div class="service-card">
-                <div class="service-icon">
-                    <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="">
-                </div>
-                <h3>Otimização da produtividade</h3>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="">
-                </div>
-                <h3>Investimento em processos com foco em resultado</h3>
+                <span class="service-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
+                </span>
+                <h3>Implantação e ajuste do orçamento para <strong>redução de custos</strong></h3>
             </div>
             <div class="service-card">
-                <div class="service-icon">
-                    <img src="{{ url_for('static', filename='images/home/v94_5.png') }}" alt="">
-                </div>
-                <h3>Implantação e ajuste do orçamento para redução de custos</h3>
+                <span class="service-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+                </span>
+                <h3>Investimento em processos com <strong>foco em resultado</strong></h3>
             </div>
             <div class="service-card">
-                <div class="service-icon">
-                    <img src="{{ url_for('static', filename='images/home/v94_6.png') }}" alt="">
-                </div>
-                <h3>Expansão e abertura de novas lojas</h3>
+                <span class="service-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+                </span>
+                <h3><strong>Desenvolvimento</strong> e capacitação de pessoas</h3>
             </div>
             <div class="service-card">
-                <div class="service-icon">
-                    <img src="{{ url_for('static', filename='images/home/carrossel.png') }}" alt="">
-                </div>
-                <h3>Desenvolvimento e capacitação de pessoas</h3>
+                <span class="service-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                </span>
+                <h3><strong>Otimização</strong> da produtividade</h3>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Results Section -->
-<section class="results">
-    <div class="container">
-        <h2>A excelência de nosso trabalho é comprovada pelos resultados que geramos aos nossos clientes!</h2>
-        <p>Do diagnóstico inicial à geração e acompanhamento de resultados</p>
-        <p>Nosso fluxo de geração de resultados é desenvolvido a partir de uma metodologia testada e de eficácia comprovada</p>
-
-        <div class="results-timeline">
-            <div class="timeline-step">
-                <div class="step-number">1</div>
-                <h3>Avaliação do cenário atual</h3>
-            </div>
-            <div class="timeline-step">
-                <div class="step-number">2</div>
-                <h3>Projeção de oportunidades</h3>
-            </div>
-            <div class="timeline-step">
-                <div class="step-number">3</div>
-                <h3>Elaboração do projeto</h3>
-            </div>
-            <div class="timeline-step">
-                <div class="step-number">4</div>
-                <h3>Implantação</h3>
-            </div>
-            <div class="timeline-step">
-                <div class="step-number">5</div>
-                <h3>Gestão de resultados</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Portfolio Section -->
-<section class="portfolio">
-    <div class="container">
-        <h2>Nossos serviços são divididos em 5 grandes áreas:</h2>
-        <p>De ponta a ponta, nós temos as soluções para as demandas de seu varejo!</p>
-
-        <div class="portfolio-grid">
-            <a href="/servicos/comercial" class="portfolio-card">
-                <div class="card-icon">
-                    <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="">
-                </div>
-                <h3>Comercial, Pricing e Gestão de Categorias</h3>
-                <p>Gestão de Compras<br>Pricing<br>Gestão de Categorias</p>
-                <span class="card-link">Saiba mais →</span>
-            </a>
-
-            <a href="/servicos/estoque" class="portfolio-card">
-                <div class="card-icon">
-                    <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="">
-                </div>
-                <h3>Estoques e Prevenção de Perdas</h3>
-                <p>Gestão de Estoques<br>Prevenção de perdas</p>
-                <span class="card-link">Saiba mais →</span>
-            </a>
-
-            <a href="/servicos/financeiro" class="portfolio-card">
-                <div class="card-icon">
-                    <img src="{{ url_for('static', filename='images/home/v94_5.png') }}" alt="">
-                </div>
-                <h3>Financeiro e Controladoria</h3>
-                <p>Gestão Financeira<br>Controladoria</p>
-                <span class="card-link">Saiba mais →</span>
-            </a>
-
-            <a href="/servicos/pessoal-operacao" class="portfolio-card">
-                <div class="card-icon">
-                    <img src="{{ url_for('static', filename='images/home/v94_6.png') }}" alt="">
-                </div>
-                <h3>Pessoas e Operação</h3>
-                <p>Gestão operacional<br>Gestão da produtividade</p>
-                <span class="card-link">Saiba mais →</span>
-            </a>
-
-            <a href="/servicos/estrategico" class="portfolio-card">
-                <div class="card-icon">
-                    <img src="{{ url_for('static', filename='images/home/carrossel.png') }}" alt="">
-                </div>
-                <h3>Gestão Estratégica e Governança Corporativa</h3>
-                <p>Planejamento estratégico<br>Plano de negócios<br>Governança corporativa</p>
-                <span class="card-link">Saiba mais →</span>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Diagnostics Section -->
-<section class="diagnostics">
-    <div class="container">
-        <h2>Abordagem completa que oferece soluções em todas as áreas de seu negócio</h2>
-        <p>Veja os serviços de nosso portfólio:</p>
-
-        <div class="diagnostics-grid">
-            <div class="diagnostic-card">
-                <span class="card-label">Fase 1</span>
-                <h3>Diagnóstico 360º</h3>
-                <p>Na 1ª fase, é feito um diagnóstico 360º, onde avaliamos o cenário atual a partir de mais de 200 critérios mensuráveis, voltado a três verticais: pessoas, processos e resultados.</p>
-            </div>
-            <div class="diagnostic-card">
-                <span class="card-label">Fase 2</span>
-                <h3>Assessoria e Consultoria</h3>
-                <p>Na fase 2, de assessoria ou consultoria, colocamos a mão na massa e executamos as diretrizes traçadas no diagnóstico.</p>
+            <div class="service-card">
+                <span class="service-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+                </span>
+                <h3><strong>Expansão</strong> e abertura de novas lojas</h3>
             </div>
         </div>
     </div>
@@ -205,169 +92,260 @@
 <!-- Cases Section -->
 <section class="cases">
     <div class="container">
-        <h2>Conheça alguns cases de sucesso</h2>
+        <h2 class="cases-title">A excelência de nosso trabalho é <span class="hl">comprovada pelos resultados</span> que geramos aos nossos clientes!</h2>
 
         <div class="cases-grid">
-            <div class="case-card">
+            <article class="case-card">
                 <img src="{{ url_for('static', filename='images/home/rede_verde_mais.png') }}" alt="Rede Verde Mais">
                 <div class="case-content">
                     <span class="case-label">Case de sucesso</span>
                     <h3>Rede Verde Mais</h3>
-                    <p>Rede Verde Mais e Unitrier implantam otimização de processos e conquistam quase 2% de crescimento no lucro líquido.</p>
-                    <a href="/cases" class="btn btn-secondary">Saiba mais</a>
+                    <p>Rede Verde Mais e Unitrier implantam otimização de processos e conquistam quase
+                        <strong>2% de crescimento no lucro líquido</strong>.</p>
+                    <a href="/cases" class="card-link">Saiba mais <span class="arrow">↘</span></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="case-card">
+            <article class="case-card">
                 <img src="{{ url_for('static', filename='images/home/rede_emporium.png') }}" alt="Rede Emporium">
                 <div class="case-content">
                     <span class="case-label">Case de sucesso</span>
                     <h3>Rede Emporium</h3>
-                    <p>Rede paulista Emporium São Paulo, 5 lojas com a assessoria da Unitrier, teve um importante aumento de 1,62% no lucro líquido!</p>
-                    <a href="/cases" class="btn btn-secondary">Saiba mais</a>
+                    <p>Rede paulista Emporium São Paulo, 5 lojas com a assessoria da Unitrier, teve um importante
+                        <strong>aumento de 1,62%</strong> no lucro líquido!</p>
+                    <a href="/cases" class="card-link">Saiba mais <span class="arrow">↘</span></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="case-card">
+            <article class="case-card">
                 <img src="{{ url_for('static', filename='images/home/rede_barracao.svg') }}" alt="Rede Barracão">
                 <div class="case-content">
                     <span class="case-label">Case de sucesso</span>
                     <h3>Rede Barracão</h3>
-                    <p>Índice de perdas no açougue despencou de 5,14% para 1,90% em rede de supermercados com a assessoria da Unitrier.</p>
-                    <a href="/cases" class="btn btn-secondary">Saiba mais</a>
+                    <p>Índice de perdas no açougue <strong>despencou de 5,14% para 1,90%</strong> em rede de
+                        supermercados com a assessoria da Unitrier.</p>
+                    <a href="/cases" class="card-link">Saiba mais <span class="arrow">↘</span></a>
                 </div>
-            </div>
+            </article>
+        </div>
+
+        <div class="cases-cta">
+            <a href="#blog" class="btn btn-primary">Leia mais informações no nosso Blog</a>
         </div>
     </div>
 </section>
 
-<!-- Methodology Section -->
-<section class="methodology">
-    <div class="container">
-        <h2>Conceito Internacional de Gerenciamento de Projetos PMBOK/PMI</h2>
-        <p>Especialidade no varejo</p>
-
-        <div class="methodology-grid">
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="">
-                <span>Planejamento estratégico</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="">
-                <span>Gestão Financeira</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/v94_5.png') }}" alt="">
-                <span>Gestão da Controladoria</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/v94_6.png') }}" alt="">
-                <span>Gestão Comercial</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/carrossel.png') }}" alt="">
-                <span>Gestão de Categorias</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="">
-                <span>Pricing</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="">
-                <span>Gestão de Estoques</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/v94_5.png') }}" alt="">
-                <span>Prevenção de Perdas</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/v94_6.png') }}" alt="">
-                <span>Gestão Operacional</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/carrossel.png') }}" alt="">
-                <span>Gestão da Produtividade</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/v51_12.png') }}" alt="">
-                <span>Governança Corporativa</span>
-            </div>
-            <div class="method-item">
-                <img src="{{ url_for('static', filename='images/home/v51_14.png') }}" alt="">
-                <span>Plano de negócios</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Numbers Section -->
+<!-- Numbers Section (light heading -> blue banner straddling into dark) -->
 <section class="numbers">
     <div class="container">
-        <h2>Faça o investimento certo que vai elevar o sucesso de seu negócio à máxima potência!</h2>
-        <p>Conheça alguns números que a Unitrier alcançou para empresas varejistas:</p>
+        <h2 class="numbers-title">Faça o investimento certo que vai elevar <span class="hl">o sucesso de seu negócio</span> à máxima potência!</h2>
+        <p class="numbers-lead">Conheça <strong>alguns números que a Unitrier alcançou</strong> para empresas varejistas:</p>
 
-        <div class="numbers-grid">
-            <div class="number-card">
-                <span class="number-value">5 dias</span>
-                <span class="number-label">de otimização média no ciclo financeiro*</span>
+        <div class="numbers-banner">
+            <div class="numbers-grid">
+                <div class="number-card">
+                    <span class="number-value">5 dias</span>
+                    <span class="number-label">de otimização média no ciclo financeiro</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-value">3,00%</span>
+                    <span class="number-label">de aumento médio na margem das ações promocionais</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-value">1,5%</span>
+                    <span class="number-label">de aumento médio no lucro líquido</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-value">1,00%</span>
+                    <span class="number-label">de redução média na perda do FLV</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-value">2,00%</span>
+                    <span class="number-label">de redução média no CMV</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-value">30%</span>
+                    <span class="number-label">de otimização na produtividade do time</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-value">1,2%</span>
+                    <span class="number-label">de redução média na perda do açougue</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-value">80%</span>
+                    <span class="number-label">de aumento na produtividade da gestão de categorias e precificação</span>
+                </div>
+                <div class="number-card">
+                    <span class="number-value">2,00%</span>
+                    <span class="number-label">de redução média na despesa operacional geral</span>
+                </div>
             </div>
-            <div class="number-card">
-                <span class="number-value">3,00%</span>
-                <span class="number-label">de aumento médio na margem das ações promocionais*</span>
-            </div>
-            <div class="number-card">
-                <span class="number-value">1,5%</span>
-                <span class="number-label">de aumento médio no lucro líquido**</span>
-            </div>
-            <div class="number-card">
-                <span class="number-value">1,00%</span>
-                <span class="number-label">de redução média na perda do FLV**</span>
-            </div>
-            <div class="number-card">
-                <span class="number-value">2,00%</span>
-                <span class="number-label">de redução média no CMV*</span>
-            </div>
-            <div class="number-card">
-                <span class="number-value">30%</span>
-                <span class="number-label">de otimização na produtividade do time*</span>
-            </div>
-            <div class="number-card">
-                <span class="number-value">1,2%</span>
-                <span class="number-label">de redução média na perda do açougue*</span>
-            </div>
-            <div class="number-card">
-                <span class="number-value">80%</span>
-                <span class="number-label">de aumento na produtividade da gestão de categorias e precificação**</span>
-            </div>
-            <div class="number-card">
-                <span class="number-value">2,00%</span>
-                <span class="number-label">de redução média na despesa operacional geral**</span>
-            </div>
-        </div>
-
-        <p class="numbers-disclaimer">*Resultados médios alcançados com base no histórico de projetos implantados. ** Case publicado em veículo de comunicação do setor varejista</p>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta">
-    <div class="container">
-        <div class="cta-content">
-            <span class="cta-badge">Centenas de empresas contam com a Unitrier em suas estratégias</span>
-            <h2>Eleve os resultados e acelere o crescimento de seu varejo</h2>
-            <p>Diagnosticamos falhas, identificamos oportunidades, traçamos planos de ação, executamos e acompanhamos resultados para elevar o sucesso de seu negócio à máxima potência</p>
-            <a href="/contato" class="btn btn-primary">Descubra todo potencial de lucro de seu negócio</a>
-        </div>
-        <div class="cta-image">
-            <img src="{{ url_for('static', filename='images/home/IMAGEM HERO.png') }}" alt="">
+            <p class="numbers-disclaimer">Resultados médios alcançados com base no histórico de projetos implantados.<br>Case publicado em veículo de comunicação do setor varejista</p>
         </div>
     </div>
 </section>
 
-<!-- Blog Section -->
-<section class="blog">
+<!-- Approach / Diagram Section (dark) -->
+<section class="approach">
+    <div class="container approach-inner">
+        <div class="approach-text">
+            <h2>Abordagem completa que oferece soluções em todas as áreas de seu negócio</h2>
+            <p><strong>Veja os serviços</strong> de nosso portfólio:</p>
+        </div>
+
+        <div class="wheel">
+            <div class="wheel-center">
+                <div class="wheel-mark"><span></span><span></span></div>
+                <span class="wheel-label">Especialidade no varejo</span>
+            </div>
+            <span class="badge b1">Plano de negócios</span>
+            <span class="badge b2">Planejamento estratégico</span>
+            <span class="badge b3">Gestão Financeira</span>
+            <span class="badge b4">Gestão da Controladoria</span>
+            <span class="badge b5">Gestão Comercial</span>
+            <span class="badge b6">Gestão de Categorias</span>
+            <span class="badge b7">Pricing</span>
+            <span class="badge b8">Gestão de Estoques</span>
+            <span class="badge b9">Prevenção de Perdas</span>
+            <span class="badge b10">Gestão Operacional</span>
+            <span class="badge b11">Gestão da Produtividade</span>
+            <span class="badge b12">Governança Corporativa</span>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section (dark) -->
+<section class="portfolio">
     <div class="container">
-        <h2>Leia mais informações no nosso Blog</h2>
+        <h2 class="portfolio-title">De ponta a ponta, nós temos as soluções para as demandas de seu varejo!</h2>
+        <p class="portfolio-lead"><strong>Nossos serviços</strong> são divididos em 5 grandes áreas:</p>
+
+        <div class="portfolio-grid">
+            <a href="/servicos/comercial" class="portfolio-card">
+                <span class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 7H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+                </span>
+                <h3>Comercial, Pricing e Gestão de Categorias</h3>
+                <ul>
+                    <li>Gestão de Compras</li>
+                    <li>Pricing</li>
+                    <li>Gestão de Categorias</li>
+                </ul>
+                <span class="card-link">Saiba mais <span class="arrow">↘</span></span>
+            </a>
+
+            <a href="/servicos/estoque" class="portfolio-card">
+                <span class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7L12 12l8.7-5M12 22V12"/></svg>
+                </span>
+                <h3>Estoques e Prevenção de Perdas</h3>
+                <ul>
+                    <li>Gestão de Estoques</li>
+                    <li>Prevenção de perdas</li>
+                </ul>
+                <span class="card-link">Saiba mais <span class="arrow">↘</span></span>
+            </a>
+
+            <a href="/servicos/financeiro" class="portfolio-card">
+                <span class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg>
+                </span>
+                <h3>Financeiro e Controladoria</h3>
+                <ul>
+                    <li>Gestão Financeira</li>
+                    <li>Controladoria</li>
+                </ul>
+                <span class="card-link">Saiba mais <span class="arrow">↘</span></span>
+            </a>
+
+            <a href="/servicos/pessoal-operacao" class="portfolio-card">
+                <span class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5a3 3 0 0 1 0 6M18 20c0-2.5-1-4.7-2.5-6"/></svg>
+                </span>
+                <h3>Pessoas e Operação</h3>
+                <ul>
+                    <li>Gestão operacional</li>
+                    <li>Gestão da produtividade</li>
+                </ul>
+                <span class="card-link">Saiba mais <span class="arrow">↘</span></span>
+            </a>
+
+            <a href="/servicos/estrategico" class="portfolio-card">
+                <span class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>
+                </span>
+                <h3>Gestão Estratégica e Governança Corporativa</h3>
+                <ul>
+                    <li>Planejamento estratégico</li>
+                    <li>Plano de negócios</li>
+                    <li>Governança corporativa</li>
+                </ul>
+                <span class="card-link">Saiba mais <span class="arrow">↘</span></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Methodology / Timeline Section (light) -->
+<section class="flow">
+    <div class="container">
+        <h2 class="flow-title">Do diagnóstico inicial à geração e acompanhamento de resultados</h2>
+        <p class="flow-lead">Nosso <span class="hl">fluxo de geração de resultados</span> é desenvolvido a partir de uma metodologia testada e de eficácia comprovada</p>
+
+        <div class="flow-steps">
+            <div class="flow-step">
+                <span class="step-badge">1</span>
+                <span class="step-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 3h9l6 6v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M8 13h8M8 17h5"/></svg>
+                </span>
+                <h3>Avaliação do cenário atual</h3>
+            </div>
+            <div class="flow-step">
+                <span class="step-badge">2</span>
+                <span class="step-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+                </span>
+                <h3>Projeção de oportunidades</h3>
+            </div>
+            <div class="flow-step">
+                <span class="step-badge">3</span>
+                <span class="step-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+                </span>
+                <h3>Elaboração do projeto</h3>
+            </div>
+            <div class="flow-step">
+                <span class="step-badge">4</span>
+                <span class="step-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M9 5l3 3 3-3"/><rect x="4" y="10" width="16" height="10" rx="2"/></svg>
+                </span>
+                <h3>Implantação</h3>
+            </div>
+            <div class="flow-step">
+                <span class="step-badge">5</span>
+                <span class="step-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l3-3 3 2 4-6"/><path d="M17 8h1v3"/></svg>
+                </span>
+                <h3>Gestão de resultados</h3>
+            </div>
+        </div>
+
+        <div class="flow-phases">
+            <div class="phase phase-1">
+                <h3>Fase 1</h3>
+                <p>Na 1ª fase, <strong>é feito um diagnóstico 360º</strong>, onde avaliamos o cenário atual a partir de mais de 200 critérios mensuráveis, voltado a três verticais: pessoas, processos e resultados.</p>
+            </div>
+            <div class="phase phase-2">
+                <h3>Fase 2</h3>
+                <p>Na fase 2, de assessoria ou consultoria, colocamos a mão na massa e <strong>executamos as diretrizes traçadas no diagnóstico.</strong></p>
+            </div>
+        </div>
+
+        <div class="flow-cta">
+            <a href="/contato" class="btn btn-primary">Fale com um especialista</a>
+        </div>
+
+        <p class="flow-note">Conceito Internacional de Gerenciamento de Projetos PMBOK/PMI</p>
     </div>
 </section>
 {% endblock %}

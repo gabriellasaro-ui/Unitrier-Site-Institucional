@@ -3,80 +3,69 @@
 {% block title %}Financeiro e Controladoria - Unitrier{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/financeiro.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/servicos.css') }}">
 {% endblock %}
 
 {% block content %}
 <section class="service-hero">
     <div class="container">
         <span class="service-badge">Setor de serviços</span>
-        <h1>Financeiro e Controladoria</h1>
-        <p>
-            A função estratégica do departamento financeiro e da controladoria é essencial,
-            pois atuam como os principais indicadores de desempenho da empresa.
+        <h1 class="service-hero-title">Financeiro e Controladoria</h1>
+        <p class="service-hero-desc">
+            A função estratégica do departamento financeiro e da controladoria é essencial, pois atuam como os
+            principais indicadores de desempenho da empresa.
         </p>
-        <p>
-            A obtenção de dados seguros, um planejamento financeiro eficaz, a análise precisa do
-            resultado operacional através do Demonstrativo do Resultado do Exercício (DRE), o
-            planejamento orçamentário meticuloso, a avaliação da liquidez do negócio, e a gestão
-            rigorosa de todas as metas e indicadores empresariais são fundamentais para alcançar
-            um resultado satisfatório.
+        <p class="service-hero-desc">
+            A obtenção de dados seguros, um planejamento financeiro eficaz, a análise precisa do resultado
+            operacional através do Demonstrativo do Resultado do Exercício (DRE), o planejamento orçamentário
+            meticuloso, a avaliação da liquidez do negócio, e a <strong>gestão rigorosa de todas as metas e
+            indicadores empresariais são fundamentais para alcançar um resultado satisfatório.</strong>
         </p>
     </div>
 </section>
 
-<section class="services-detail">
+<section class="service-solutions">
     <div class="container">
-        <div class="service-block">
-            <div class="service-content">
-                <h2>Gestão Financeira</h2>
-                <div class="service-tags">
-                    <span>Tesouraria</span>
-                    <span>Contas a Receber</span>
-                    <span>Contas a Pagar</span>
-                    <span>Gestão de Caixas e Bancos</span>
-                    <span>Financeiro Gerencial e Estratégico</span>
-                </div>
-                <ul class="service-list">
-                    <li>Implantação dos processos e operações financeiras</li>
-                    <li>DRE por unidade e centro de custos</li>
-                    <li>Fluxo de caixa</li>
-                    <li>Gestão orçamentária</li>
-                    <li>Balanço Financeiro com indicadores de liquidez</li>
-                </ul>
-            </div>
-            <div class="service-image">
+        <h2 class="solutions-title">Confira os serviços que a Unitrier oferece no setor <span class="hl">Financeiro:</span></h2>
+
+        <div class="solution-block solution-block--reversed">
+            <div class="solution-image">
                 <img src="{{ url_for('static', filename='images/financeiro/gestão financeira.png') }}" alt="Gestão Financeira">
             </div>
+            <div class="solution-card">
+                <h3>Gestão Financeira</h3>
+                <div class="solution-cols">
+                    <p class="solution-desc">Implantação dos processos e operações financeiras | DRE por unidade e
+                        centro de custos | Fluxo de caixa | Gestão orçamentária | Balanço Financeiro com indicadores
+                        de liquidez</p>
+                    <ul class="solution-list">
+                        <li>Tesouraria</li>
+                        <li>Contas a Receber</li>
+                        <li>Contas a Pagar</li>
+                        <li>Gestão de Caixas e Bancos</li>
+                        <li>Financeiro Gerencial e Estratégico</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="service-block service-block--reversed">
-            <div class="service-content">
-                <h2>Gestão de Controladoria</h2>
-                <div class="service-tags">
-                    <span>Plano de Metas de Resultados</span>
-                    <span>Painel de Indicadores de Performance</span>
-                </div>
-                <ul class="service-list">
-                    <li>Implantação da controladoria administrativa</li>
-                    <li>Definição dos KPI's voltados ao negócio</li>
-                    <li>Gestão orientada por dados e resultados</li>
-                    <li>Gestão a vista</li>
-                    <li>Auditoria da controladoria (processos e indicadores)</li>
-                </ul>
-            </div>
-            <div class="service-image">
+        <div class="solution-block">
+            <div class="solution-image">
                 <img src="{{ url_for('static', filename='images/financeiro/gestão de controladoria.png') }}" alt="Gestão de Controladoria">
             </div>
+            <div class="solution-card">
+                <h3>Gestão de Controladoria</h3>
+                <div class="solution-cols">
+                    <p class="solution-desc">Implantação da controladoria administrativa | Definição dos KPI's
+                        voltados ao negócio | Gestão orientada por dados e resultados | Gestão a vista | Auditoria
+                        da controladoria (processos e indicadores)</p>
+                    <ul class="solution-list">
+                        <li>Plano de Metas de Resultados</li>
+                        <li>Painel de Indicadores de Performance</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-
-<section class="cta-section">
-    <div class="container">
-        <h2>Quer otimizar sua gestão financeira?</h2>
-        <p>Fale com um especialista e descubra como podemos ajudar seu negócio.</p>
-        <a href="/contato" class="btn btn-primary">Fale com um especialista</a>
     </div>
 </section>
 {% endblock %}

@@ -1,226 +1,150 @@
 /* ============================================
-   Diagnóstico 360 Page Styles
+   Diagnóstico 360º — faithful to Figma (dark)
    ============================================ */
 
-.diagnostico-hero {
-    padding: 80px 0;
-    background-color: var(--primary-dark);
+.diag-hero {
+    padding: 70px 0 40px;
+    background-color: var(--bg-dark);
     color: var(--text-white);
     text-align: center;
 }
 
-.diagnostico-hero h1 {
-    font-size: 48px;
+.diag-hero h1 {
+    font-size: 44px;
     font-weight: 800;
-    margin-bottom: 24px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 20px;
 }
 
-.diagnostico-hero p {
-    font-size: 18px;
-    line-height: 1.8;
-    opacity: 0.9;
-    max-width: 800px;
+.diag-hero p {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.85;
+    max-width: 720px;
     margin: 0 auto;
 }
 
-.diagnostico-steps {
-    padding: var(--section-padding);
-    background-color: #090C17;
-}
+.diag-hero p strong { color: var(--text-white); opacity: 1; font-weight: 700; }
 
-.diagnostico-steps h2 {
-    font-size: 36px;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 60px;
+/* ---- Timeline ---- */
+.diag-steps {
+    padding: 40px 0 90px;
+    background-color: var(--bg-dark);
     color: var(--text-white);
 }
 
-.roadmap {
+.diag-timeline {
     position: relative;
-    padding-left: 80px;
     max-width: 900px;
     margin: 0 auto;
 }
 
-.roadmap::before {
+.diag-step {
+    display: grid;
+    grid-template-columns: 64px 300px 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+    position: relative;
+}
+
+/* vertical connecting line through the markers */
+.diag-timeline::before {
     content: '';
     position: absolute;
-    left: 19px;
-    top: 0;
-    bottom: 0;
+    top: 60px;
+    bottom: 60px;
+    left: 31px;
     width: 2px;
-    background: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.18);
 }
 
-.roadmap-item {
-    position: relative;
-    padding-bottom: 48px;
-}
-
-.roadmap-item:last-child {
-    padding-bottom: 0;
-}
-
-.roadmap-marker {
-    position: absolute;
-    left: -80px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background: var(--primary-blue);
+.diag-marker {
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background-color: var(--bg-dark);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 0 4px rgba(1, 161, 255, 0.3);
-}
-
-.roadmap-number {
-    color: var(--text-white);
-    font-weight: 700;
-    font-size: 16px;
-}
-
-.roadmap-content {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.roadmap-image {
-    flex-shrink: 0;
-    width: 140px;
-}
-
-.roadmap-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.roadmap-text {
-    flex: 1;
-}
-
-.roadmap-text h3 {
     font-size: 24px;
     font-weight: 700;
     color: var(--text-white);
-    margin-bottom: 12px;
+    position: relative;
+    z-index: 2;
 }
 
-.roadmap-text p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.diagnostico-benefits {
-    padding: var(--section-padding);
-    background-color: var(--text-white);
-}
-
-.diagnostico-benefits h2 {
-    font-size: 36px;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 60px;
-    color: var(--text-dark);
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.benefit-item {
+.diag-illus {
     display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 24px;
-    background-color: var(--bg-light);
-    border-radius: 12px;
-}
-
-.benefit-icon {
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary-green);
-    color: var(--text-white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
     justify-content: center;
+}
+
+.diag-illus img {
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+}
+
+.diag-text h3 {
+    font-size: 22px;
     font-weight: 700;
-    flex-shrink: 0;
+    margin-bottom: 10px;
 }
 
-.benefit-item span:last-child {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text-dark);
+.diag-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    opacity: 0.82;
+    max-width: 420px;
 }
 
-.cta-section {
-    padding: var(--section-padding);
-    background-color: var(--primary-dark);
+/* ---- CTA (blue gradient with rays) ---- */
+.diag-cta {
+    padding: 80px 0;
     text-align: center;
+    background-color: #0a2f57;
+    background-image:
+        radial-gradient(ellipse 60% 80% at 50% 120%, rgba(1, 161, 255, 0.55), transparent 60%),
+        conic-gradient(from 180deg at 50% 130%,
+            rgba(255, 255, 255, 0.06) 0deg,
+            transparent 12deg,
+            rgba(255, 255, 255, 0.06) 24deg,
+            transparent 36deg,
+            rgba(255, 255, 255, 0.06) 48deg,
+            transparent 60deg,
+            rgba(255, 255, 255, 0.06) 72deg,
+            transparent 84deg);
     color: var(--text-white);
 }
 
-.cta-section h2 {
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 16px;
+.diag-cta-logo {
+    height: 34px;
+    width: auto;
+    margin-bottom: 28px;
+    filter: brightness(0) invert(1);
 }
 
-.cta-section p {
-    font-size: 18px;
-    opacity: 0.9;
+.diag-cta h2 {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.25;
     margin-bottom: 32px;
 }
 
+/* ---- Responsive ---- */
 @media (max-width: 768px) {
-    .diagnostico-hero h1 {
-        font-size: 36px;
+    .diag-hero h1 { font-size: 32px; }
+    .diag-step {
+        grid-template-columns: 48px 1fr;
+        grid-template-areas:
+            "marker illus"
+            "marker text";
+        gap: 8px 16px;
     }
-
-    .roadmap {
-        padding-left: 60px;
-    }
-
-    .roadmap::before {
-        left: 19px;
-        top: 0;
-        bottom: 0;
-    }
-
-    .roadmap-marker {
-        left: -60px;
-        width: 36px;
-        height: 36px;
-    }
-
-    .roadmap-number {
-        font-size: 14px;
-    }
-
-    .roadmap-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .roadmap-image {
-        width: 100px;
-    }
-
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
+    .diag-marker { width: 48px; height: 48px; font-size: 20px; grid-area: marker; }
+    .diag-illus { grid-area: illus; justify-content: flex-start; }
+    .diag-illus img { max-height: 130px; }
+    .diag-text { grid-area: text; }
+    .diag-timeline::before { left: 23px; }
+    .diag-cta h2 { font-size: 26px; }
 }

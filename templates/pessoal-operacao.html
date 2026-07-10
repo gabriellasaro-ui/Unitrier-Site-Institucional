@@ -3,75 +3,65 @@
 {% block title %}Pessoas e Operação - Unitrier{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/pessoal-operacao.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/servicos.css') }}">
 {% endblock %}
 
 {% block content %}
 <section class="service-hero">
     <div class="container">
         <span class="service-badge">Setor de serviços</span>
-        <h1>Pessoas e Operação</h1>
-        <p>
-            A Unitrier apoia seu negócio para que as melhores práticas capazes de otimizar
-            a produtividade e os processos sejam aplicadas.
+        <h1 class="service-hero-title">Pessoas e Operação</h1>
+        <p class="service-hero-desc">
+            A Unitrier apoia seu negócio para que as melhores práticas capazes de <strong>otimizar a produtividade
+            e os processos</strong> sejam aplicadas.
         </p>
-        <p>
-            O gasto com o pessoal representa uma grande parcela da oneração dos supermercados,
-            por isso deve ser executado de forma inteligente e estratégica.
+        <p class="service-hero-desc">
+            O gasto com o pessoal representa uma grande parcela da oneração dos supermercados, por isso <strong>deve
+            ser executado de forma inteligente e estratégica.</strong>
         </p>
     </div>
 </section>
 
-<section class="services-detail">
+<section class="service-solutions">
     <div class="container">
-        <div class="service-block">
-            <div class="service-content">
-                <h2>Gestão da Produtividade</h2>
-                <div class="service-tags">
-                    <span>Estudo do Quadro de Colaboradores</span>
-                    <span>Gestão de Pessoas</span>
-                    <span>Treinamento e Desenvolvimento</span>
-                </div>
-                <ul class="service-list">
-                    <li>Implantação dos processos e operações de produtividade</li>
-                    <li>Avaliação de produtividade per capita</li>
-                    <li>Formação de equipes</li>
-                    <li>Checklist de atividades</li>
-                    <li>Manual de processos e rotinas</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="{{ url_for('static', filename='images/pessoal-operacao/v191_1006.png') }}" alt="Gestão da Produtividade">
-            </div>
-        </div>
+        <h2 class="solutions-title">Confira os serviços que a Unitrier oferece no setor <span class="hl">Pessoas e Operações:</span></h2>
 
-        <div class="service-block service-block--reversed">
-            <div class="service-content">
-                <h2>Gestão Operacional</h2>
-                <div class="service-tags">
-                    <span>Gestão do Ponto de Venda</span>
-                    <span>Gestão de Perecíveis</span>
-                </div>
-                <ul class="service-list">
-                    <li>Implantação dos processos e operações de loja</li>
-                    <li>Gestão de abastecimento e atendimento</li>
-                    <li>Gestão de Açougue</li>
-                    <li>Gestão de FLV</li>
-                    <li>Gestão de Produção (Padaria, Confeitaria, Rotisseria e Restaurante)</li>
-                </ul>
-            </div>
-            <div class="service-image">
+        <div class="solution-block">
+            <div class="solution-image">
                 <img src="{{ url_for('static', filename='images/pessoal-operacao/v191_1084.png') }}" alt="Gestão Operacional">
             </div>
+            <div class="solution-card">
+                <h3>Gestão Operacional</h3>
+                <div class="solution-cols">
+                    <p class="solution-desc">Implantação dos processos e operações de loja | Gestão de abastecimento
+                        e atendimento | Gestão de Açougue | Gestão de FLV | Gestão de Produção (Padaria, Confeitaria,
+                        Rotisseria e Restaurante)</p>
+                    <ul class="solution-list">
+                        <li>Gestão do Ponto de Venda</li>
+                        <li>Gestão de Perecíveis</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
 
-<section class="cta-section">
-    <div class="container">
-        <h2>Quer otimizar a produtividade da sua equipe?</h2>
-        <p>Fale com um especialista e descubra como podemos ajudar seu negócio.</p>
-        <a href="/contato" class="btn btn-primary">Fale com um especialista</a>
+        <div class="solution-block solution-block--reversed">
+            <div class="solution-image">
+                <img src="{{ url_for('static', filename='images/pessoal-operacao/v191_1006.png') }}" alt="Gestão da Produtividade">
+            </div>
+            <div class="solution-card">
+                <h3>Gestão da Produtividade</h3>
+                <div class="solution-cols">
+                    <p class="solution-desc">Implantação dos processos e operações de produtividade | Avaliação de
+                        produtividade per capita | Formação de equipes | Checklist de atividades | Manual de
+                        processos e rotinas</p>
+                    <ul class="solution-list">
+                        <li>Estudo do Quadro de Colaboradores</li>
+                        <li>Gestão de Pessoas</li>
+                        <li>Treinamento e Desenvolvimento</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}

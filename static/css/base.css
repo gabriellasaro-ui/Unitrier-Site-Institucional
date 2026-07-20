@@ -17,7 +17,8 @@
 
     /* Typography */
     --font-primary: 'Manrope', sans-serif;
-    --font-secondary: 'Inter', sans-serif;
+    /* Manrope em todo o site: 700 (Bold) para headlines, 400 (Regular) para subheadlines */
+    --font-secondary: 'Manrope', sans-serif;
 
     /* Spacing */
     --container-width: 1200px;

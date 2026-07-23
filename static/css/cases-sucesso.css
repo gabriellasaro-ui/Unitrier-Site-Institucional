@@ -116,6 +116,19 @@
     color: var(--text-gray);
 }
 
+.cases-banner {
+    padding: var(--section-padding);
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.cases-banner-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 .cta-section {
     padding: var(--section-padding);
     background-color: var(--primary-dark);

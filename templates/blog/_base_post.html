@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{#
+   Template PADRÃO de post do blog.
+   Cada artigo herda daqui e varia SOMENTE:
+     - head banner (imagem, categoria, título e meta vêm do contexto `post`)
+     - o corpo do texto (bloco `article`)
+   Header, footer e a fonte (Manrope) são mantidos pelo base.html.
+#}
+
+{% block title %}{{ post.title }} - Blog Unitrier{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+{% endblock %}
+
+{% block content %}
+<article class="post">
+    <!-- Head banner (varia por artigo, via contexto) -->
+    <header class="post-hero">
+        <img class="post-hero-bg" src="{{ url_for('static', filename=post.image) }}" alt="{{ post.title }}">
+        <div class="container">
+            <span class="post-cat">{{ post.category }}</span>
+            <h1>{{ post.title }}</h1>
+            <div class="post-meta">
+                <span>{{ post.date_label }}</span>
+                {% if post.author %}<span class="dot">•</span><span>Por {{ post.author }}</span>{% endif %}
+            </div>
+        </div>
+    </header>
+
+    <div class="post-wrap">
+        <div class="container">
+            <div class="post-back">
+                <a href="{{ url_for('blog') }}"><span>&larr;</span> Voltar para o Blog</a>
+            </div>
+
+            <!-- Corpo do artigo (varia por artigo) -->
+            <div class="post-article">
+                {% block article %}{% endblock %}
+
+                {% if post.tags %}
+                <div class="post-tags">
+                    {% for tag in post.tags %}<span>{{ tag }}</span>{% endfor %}
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- CTA fixo (mantido em todos os posts) -->
+            <aside class="post-cta">
+                <h2>Quer levar esses resultados para o seu supermercado?</h2>
+                <p>Com o Diagnóstico 360º da Unitrier você identifica oportunidades e recebe um plano de ação claro para crescer com segurança.</p>
+                <a href="/contato" class="btn btn-primary">Fale com um especialista</a>
+            </aside>
+        </div>
+    </div>
+</article>
+{% endblock %}

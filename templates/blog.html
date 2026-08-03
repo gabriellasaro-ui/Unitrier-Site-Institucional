@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Blog Unitrier - Conteúdos e tendências para o varejo{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="blog-hero">
+    <div class="container">
+        <span class="blog-eyebrow">Blog &amp; Conteúdos</span>
+        <h1>Insights e tendências para o varejo supermercadista</h1>
+        <p>Artigos, análises e boas práticas de gestão produzidos pelos especialistas da Unitrier para ajudar o seu negócio a crescer.</p>
+    </div>
+</section>
+
+<section class="blog-list">
+    <div class="container">
+        <div class="blog-grid">
+            {% for post in posts %}
+            <article class="blog-card">
+                <a class="blog-card-media" href="{{ url_for('blog_post', slug=post.slug) }}">
+                    <img src="{{ url_for('static', filename=post.image) }}" alt="{{ post.title }}">
+                    <span class="blog-card-cat">{{ post.category }}</span>
+                </a>
+                <div class="blog-card-body">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.excerpt }}</p>
+                    <div class="blog-card-meta">
+                        <span>{{ post.date_label }}</span>
+                        <a class="blog-card-link" href="{{ url_for('blog_post', slug=post.slug) }}">Ler artigo <span class="arrow">↘</span></a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

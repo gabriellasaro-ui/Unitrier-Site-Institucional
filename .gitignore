@@ -1,3 +1,6 @@
 venv
 venv/
 .venv
+
+# Leads captados pelo popup do site (dados pessoais — não versionar)
+data/

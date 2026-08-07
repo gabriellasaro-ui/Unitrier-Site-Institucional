@@ -471,6 +471,148 @@ img {
 }
 
 /* ============================================
+   WhatsApp flutuante
+   ============================================ */
+.wa-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: var(--text-white);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.wa-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.wa-float svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* ============================================
+   Popup de captação de leads
+   ============================================ */
+.lead-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* display:flex sobrescreve o [hidden] padrão do navegador */
+.lead-modal[hidden] {
+    display: none;
+}
+
+.lead-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(3, 38, 69, 0.65);
+}
+
+.lead-modal__box {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 36px 32px 32px;
+    border-radius: 16px;
+    background-color: var(--text-white);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.lead-modal__close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    color: var(--text-gray);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.lead-modal__close:hover {
+    color: var(--primary-dark);
+}
+
+.lead-modal__title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    line-height: 1.25;
+}
+
+.lead-modal__subtitle {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-size: 15px;
+    color: var(--text-gray);
+}
+
+.lead-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.lead-field label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.lead-field input {
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    color: var(--text-dark);
+    transition: var(--transition-fast);
+}
+
+.lead-field input::placeholder {
+    color: #A0A6B1;
+}
+
+.lead-field input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.lead-modal__error {
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #D33A3A;
+}
+
+.lead-modal__submit {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* ============================================
    Responsive
    ============================================ */
 @media (max-width: 992px) {
@@ -502,5 +644,25 @@ img {
         flex-direction: column;
         gap: 12px;
         text-align: center;
+    }
+
+    .wa-float {
+        right: 16px;
+        bottom: 16px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .wa-float svg {
+        width: 27px;
+        height: 27px;
+    }
+
+    .lead-modal__box {
+        padding: 32px 22px 26px;
+    }
+
+    .lead-modal__title {
+        font-size: 22px;
     }
 }
